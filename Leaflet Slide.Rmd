@@ -1,0 +1,37 @@
+---
+title: "Untitled"
+author: "me"
+date: "18/08/2021"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+```{r install}
+install.packages("leaflet")
+```
+
+##My Map
+
+```{r, eval=FALSE}
+library(leaflet)
+my_map <- leaflet() %>%
+  addTiles()
+my_map
+```
+
+## Markers
+
+```{r, eval=FALSE}
+library(leaflet)
+my_map <- my_map %>%
+  addMarkers(lat=43.642567, lng=-79.387054, 
+             popup = "CN Tower")
+my_map <- my_map %>%
+  addMarkers(lat = 43.6424, lng = -79.3860,
+             popup = "Ripley's Aquarium")
+my_map
+```
+
+
+
